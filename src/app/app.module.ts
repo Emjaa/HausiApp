@@ -17,13 +17,17 @@ import {MatRadioModule} from "@angular/material/radio";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule} from "@angular/forms";
+import { LampComponent } from './lamp/lamp.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingStartComponent,
     RoutingDestinationComponent,
-    LightingComponent
+    LightingComponent,
+    LampComponent,
+    TemperatureComponent
   ],
   imports: [
     BrowserModule,
