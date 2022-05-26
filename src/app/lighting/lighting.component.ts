@@ -17,11 +17,11 @@ export class LightingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-      for (let i = 0; i < 10; i++){
-        //this.lamps.fill(new Lamp(i));
-        this.lamps.push(new Lamp(i))
-        this.lampIndex++;
-      }
+      // for (let i = 0; i < 10; i++){
+      //   //this.lamps.fill(new Lamp(i));
+      //   this.lamps.push(new Lamp(i))
+      //   this.lampIndex++;
+      // }
   }
 
   removeLamp(index:number): void {
@@ -31,6 +31,19 @@ export class LightingComponent implements OnInit {
   createLamp():void{
     this.lamps.push(new Lamp(this.lampIndex))
     this.lampIndex++;
+  }
+  deletaAll():void{
+    this.lamps = [];
+  }
+  turnAllOn():void{
+    for(let lamp of this.lamps){
+      lamp.On();
+    }
+  }
+  turnAllOff():void{
+    for(let lamp of this.lamps){
+      lamp.Off();
+    }
   }
   getOn(): number{
     return this.lamps.filter(lamp => lamp.state == true).length;

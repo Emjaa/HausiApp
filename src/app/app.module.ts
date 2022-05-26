@@ -21,6 +21,7 @@ import { LampComponent } from './lamp/lamp.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
     RoutingDestinationComponent,
     LightingComponent,
     LampComponent,
-    TemperatureComponent
+    TemperatureComponent,
+    ClockComponent
   ],
     imports: [
         BrowserModule,
