@@ -4,7 +4,7 @@ import {Lamp} from "../Models/lamp";
 
 @Component({
   selector: 'app-lighting',
-  template: '<div *ngFor="let lamp of lamps"> <h3>lamp: {{lamp.GetId()}} {{lamp.GetState()}}</h3></div>',
+  templateUrl: './lighting.component.html',
   styleUrls: ['./lighting.component.css'],
 })
 
@@ -12,8 +12,9 @@ export class LightingComponent implements OnInit {
   color: ThemePalette = 'accent';
   checked = false;
   disabled = false;
-  names = ['test', 'test'];
+
   lamps :Lamp[]=[] ;
+  lampIndex = 0;
 
   constructor() { }
 
@@ -21,11 +22,17 @@ export class LightingComponent implements OnInit {
       for (let i = 0; i < 10; i++){
         //this.lamps.fill(new Lamp(i));
         this.lamps.push(new Lamp(i))
+        this.lampIndex++;
       }
   }
 
+  removeLamp(index:number): void {
+    this.lamps.splice(index);
+  }
 
-
-
+  createLamp():void{
+    this.lamps.push(new Lamp(this.lampIndex))
+    this.lampIndex++;
+  }
 
 }

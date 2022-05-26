@@ -4,7 +4,7 @@ import {Lamp} from "../Models/lamp";
 @Component({
   selector: 'app-lamp',
   styleUrls: ['./lamp.component.css'],
-  template:'<p>Lamp is working</p>'
+  template:'<mat-slide-toggle>on</mat-slide-toggle>'
 })
 export class LampComponent implements OnInit {
 

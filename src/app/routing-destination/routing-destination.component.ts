@@ -11,5 +11,5 @@ export class RoutingDestinationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  test = 10;
 }

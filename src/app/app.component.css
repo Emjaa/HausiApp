@@ -22,3 +22,7 @@
 mat-slider {
   width: 300px;
 }
+
+mat-card{
+  margin: 20px;
+}

@@ -26,9 +26,10 @@
     <br>
     <button mat-raised-button routerLink="/lighting" routerLinkActive="active">Lighting</button>
   </mat-drawer>
+  <mat-card>
 
   <router-outlet></router-outlet>
-  <app-lamp></app-lamp>
+
   <app-temperature></app-temperature>
   <mat-slider
     thumbLabel
@@ -39,6 +40,8 @@
     max="100000"
     aria-label="units"></mat-slider>
 
+    <app-lamp></app-lamp>
+  </mat-card>
 </mat-drawer-container>
 
 

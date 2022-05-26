@@ -19,6 +19,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {FormsModule} from "@angular/forms";
 import { LampComponent } from './lamp/lamp.component';
 import { TemperatureComponent } from './temperature/temperature.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TemperatureComponent } from './temperature/temperature.component';
     MatRadioModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    FormsModule
+    FormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
