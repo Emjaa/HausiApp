@@ -1,8 +1,13 @@
-export class Lamp {
-  private id: number;
-  private  state: boolean;
-  private color? : number;
+import {Room} from "./room";
 
+export class Lamp {
+  private readonly id: number;
+  public  state: boolean;
+  private color! : number;
+  public name!: string;
+  public description!: string;
+  public watts!: number;
+  public room!: Room;
   constructor(id: number) {
     this.id = id;
     this.state = false;

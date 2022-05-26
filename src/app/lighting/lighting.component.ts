@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ThemePalette} from "@angular/material/core";
 import {Lamp} from "../Models/lamp";
+import {MatAccordion} from "@angular/material/expansion";
 
 @Component({
   selector: 'app-lighting',
@@ -9,10 +10,7 @@ import {Lamp} from "../Models/lamp";
 })
 
 export class LightingComponent implements OnInit {
-  color: ThemePalette = 'accent';
-  checked = false;
-  disabled = false;
-
+  @ViewChild(MatAccordion) accordion!: MatAccordion;
   lamps :Lamp[]=[] ;
   lampIndex = 0;
 
@@ -33,6 +31,12 @@ export class LightingComponent implements OnInit {
   createLamp():void{
     this.lamps.push(new Lamp(this.lampIndex))
     this.lampIndex++;
+  }
+  getOn(): number{
+    return this.lamps.filter(lamp => lamp.state == true).length;
+  }
+  getOff(): number{
+    return this.lamps.filter(lamp => lamp.state == false).length;
   }
 
 }

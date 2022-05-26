@@ -20,6 +20,7 @@ import {FormsModule} from "@angular/forms";
 import { LampComponent } from './lamp/lamp.component';
 import { TemperatureComponent } from './temperature/temperature.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -30,22 +31,23 @@ import {MatGridListModule} from "@angular/material/grid-list";
     LampComponent,
     TemperatureComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSliderModule,
-    MatButtonModule,
-    MatCardModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatSlideToggleModule,
-    FormsModule,
-    MatGridListModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatSliderModule,
+        MatButtonModule,
+        MatCardModule,
+        MatRadioModule,
+        MatCheckboxModule,
+        MatSlideToggleModule,
+        FormsModule,
+        MatGridListModule,
+        MatExpansionModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
