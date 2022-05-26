@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoutingStartComponent } from './routing-start.component';
+import { LedStripComponent } from './led-strip.component';
 
-describe('RoutingStartComponent', () => {
-  let component: RoutingStartComponent;
-  let fixture: ComponentFixture<RoutingStartComponent>;
+describe('LedStripComponent', () => {
+  let component: LedStripComponent;
+  let fixture: ComponentFixture<LedStripComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RoutingStartComponent ]
+      declarations: [ LedStripComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoutingStartComponent);
+    fixture = TestBed.createComponent(LedStripComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

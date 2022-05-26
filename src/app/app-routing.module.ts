@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RoutingStartComponent } from './routing-start/routing-start.component';
-import { RoutingDestinationComponent } from './routing-destination/routing-destination.component';
 import { LightingComponent } from './lighting/lighting.component';
+import {  SettingsComponent } from './settings/settings.component';
+import {  ClockComponent } from './clock/clock.component';
+import {  AutomationComponent } from './automation/automation.component';
+
 
 
 const routes: Routes = [
-  { path: 'first-component', component: RoutingStartComponent },
-  { path: 'second-component', component: RoutingDestinationComponent },
   { path: 'lighting', component: LightingComponent },
+  { path: 'settings', component:  SettingsComponent},
+  { path: 'clock', component:  ClockComponent},
+  { path: 'automation', component:  AutomationComponent},
 ];
 
 @NgModule({
